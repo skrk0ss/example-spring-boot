@@ -12,8 +12,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @EnableAutoConfiguration
-// 다양한 설정이 자동 수행, 기존으 ㅣ스프링 애플리케이션에
-// 필요했던 설정파일이 필요없게 됨.
 @ComponentScan(basePackages = { "spring.boot.example" })
 public class SampleWebJspApplication extends SpringBootServletInitializer {
 
