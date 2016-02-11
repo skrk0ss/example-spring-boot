@@ -1,0 +1,29 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="spring.boot.example.mapper.BoardMapper">
+	<resultMap id="BaseResultMap" type="spring.boot.example.domain.Board">
+		<id column="id" jdbcType="INTEGER" property="id" />
+		<result column="user_id" jdbcType="VARCHAR" property="userId" />
+		<result column="title" jdbcType="VARCHAR" property="title" />
+		<result column="contents" jdbcType="LONGVARCHAR" property="contents" />
+		<result column="hits" jdbcType="INTEGER" property="userId" />
+		<result column="enabled" jdbcType="BIT" property="enabled" />
+		<result column="created_dt" jdbcType="DATE" property="createdDt" />
+		<result column="updated_dt" jdbcType="DATE" property="updatedDt" />
+	</resultMap>
+
+	<select id="get" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+		SELECT id, user_id, title, contents, hits, enabled, created_dt, updated_dt FROM bt_board WHERE id = #{id, jdbcType=INTEGER}
+	</select>
+
+	<insert id="create" parameterType="spring.boot.example.domain.Board">
+		INSERT INTO bt_board (user_id, title, contents, hits, enabled )
+		VALUES (#{userId, jdbcType=VARCHAR},#{title, jdbcType=VARCHAR},#{contents, jdbcType=VARCHAR},#{hits, jdbcType=INTEGER},1)
+	</insert>
+
+
+	<select id="getAll" resultMap="BaseResultMap">
+		SELECT id, user_id, title, contents, hits, enabled, created_dt, updated_dt FROM bt_board
+	</select>
+</mapper>
+

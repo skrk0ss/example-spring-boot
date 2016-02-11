@@ -1,0 +1,2 @@
+insert into mt_user (id, email, password, status) values ('1','test@gmai.com','$2a$10$axW4z8OML5ZLT5V0Co9kROq6oetCL1tPGH32.1o.HV1z/bnEGoYFS',1);
+insert into bt_board (id,user_id,title,contents,hits,enabled) values (1,'1','title','contents..',1,1);
