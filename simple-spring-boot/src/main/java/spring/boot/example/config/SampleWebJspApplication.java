@@ -29,7 +29,6 @@ public class SampleWebJspApplication extends SpringBootServletInitializer {
 
   public static void main(String[] args) throws Exception {
     SpringApplication.run(SampleWebJspApplication.class, args);// 내장 서버 시작.
-    logger.error("Message logged at ERROR level");
     logger.info("Message logged at INFO level");
     logger.debug("Message logged at DEBUG level");
 
