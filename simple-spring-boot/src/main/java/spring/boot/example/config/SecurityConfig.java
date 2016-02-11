@@ -40,7 +40,7 @@ class SecurityConfig extends WebSecurityConfigurerAdapter {
         .passwordParameter("password")
         .loginProcessingUrl("/j_security_check")
         .failureUrl("/login?error")
-        .defaultSuccessUrl("/board")
+        .defaultSuccessUrl("/boards")
        .and();
     http.logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/login");
     http.csrf().disable();

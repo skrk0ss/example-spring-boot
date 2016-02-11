@@ -1,0 +1,5 @@
+spring\boot\example\service\BoardServiceTest.class
+spring\boot\example\util\PasswordUtilTest.class
+spring\boot\example\controller\BoardControllerTest.class
+spring\boot\example\controller\SampleControllerTest.class
+spring\boot\example\controller\UserControllerTest.class

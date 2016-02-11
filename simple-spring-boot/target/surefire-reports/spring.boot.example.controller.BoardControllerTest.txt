@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: spring.boot.example.controller.BoardControllerTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 24.434 sec - in spring.boot.example.controller.BoardControllerTest
