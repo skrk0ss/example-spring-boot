@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.springframework.samples</groupId>
-	<artifactId>simple-spring-boot</artifactId>
+	<artifactId>simple-spring-boot-jpa</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<parent>
 		<!-- 스프링 부트의 설정정보 상속 . 스프링 부트 버전 -->
@@ -26,11 +26,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
-
 		<!-- 데이터 베이스 설정 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -41,17 +36,9 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-
-		<!-- mybatis 설정 -->
 		<dependency>
-			<groupId>org.mybatis</groupId>
-			<artifactId>mybatis</artifactId>
-			<version>3.3.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.mybatis</groupId>
-			<artifactId>mybatis-spring</artifactId>
-			<version>1.2.3</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 
 		<!-- lombok -->
@@ -80,27 +67,13 @@
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
 		</dependency>
-		<!-- <dependency> -->
-		<!-- <groupId>org.springframework.social</groupId> -->
-		<!-- <artifactId>spring-social</artifactId> -->
-		<!-- <version>1.1.4</version> -->
-		<!-- </dependency> -->
 	</dependencies>
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<!-- <dependencies> -->
-				<!-- 애플리케이션 실행한 체로 수정한 코드의 내용을 애플리케이션에 반영할 수 있음. 구림 -->
-				<!-- <dependency> -->
-				<!-- <groupId>org.springframework</groupId> -->
-				<!-- <artifactId>springloaded</artifactId> -->
-				<!-- <version>1.2.3.RELEASE</version> -->
-				<!-- </dependency> -->
-				<!-- </dependencies> -->
 			</plugin>
-
 		</plugins>
 	</build>
 
