@@ -6,14 +6,17 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.web.SpringBootServletInitializer;
+import org.springframework.boot.orm.jpa.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @EnableAutoConfiguration
-@ComponentScan(basePackages = { "spring.boot.example" })
+@ComponentScan
+@EntityScan(basePackages="spring.boot.example.domain")
+@EnableJpaRepositories(basePackages="spring.boot.example.repository")
 public class SampleWebJspApplication extends SpringBootServletInitializer {
 
   private static final Logger logger = LoggerFactory.getLogger(SampleWebJspApplication.class);
-
 
   @Override
   protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
