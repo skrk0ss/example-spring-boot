@@ -18,28 +18,26 @@ import spring.boot.example.vo.UserRequestVO;
 
 @RestController
 public class UserController {
-	
-	@Autowired
-	private UserRepository userRepository;
 
-	private static final Logger logger = LoggerFactory
-			.getLogger(UserController.class);
+  @Autowired
+  private UserRepository userRepository;
 
-	
-	@RequestMapping(value = "/users", method = RequestMethod.POST)
-	public ResponseVO update(@RequestBody UserRequestVO requestVO) {
-		return ResponseVO.ok();
-	}
+  private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
-	@RequestMapping(value = "/users/{id}", method = RequestMethod.GET)
-	public User get(@PathVariable String id) {
-		List<User> list = userRepository.findAll();
-		return new User();
-	}
+  @RequestMapping(value = "/users", method = RequestMethod.POST)
+  public ResponseVO update(@RequestBody UserRequestVO requestVO) {
+    return ResponseVO.ok();
+  }
 
-	@RequestMapping(value = "/users/{id}", method = RequestMethod.DELETE)
-	public ResponseVO delete(@PathVariable String id) {
-		return ResponseVO.ok();
-	}
+  @RequestMapping(value = "/users/{id}", method = RequestMethod.GET)
+  public User get(@PathVariable String id) {
+    List<User> list = userRepository.findAll();
+    return new User();
+  }
+
+  @RequestMapping(value = "/users/{id}", method = RequestMethod.DELETE)
+  public ResponseVO delete(@PathVariable String id) {
+    return ResponseVO.ok();
+  }
 
 }

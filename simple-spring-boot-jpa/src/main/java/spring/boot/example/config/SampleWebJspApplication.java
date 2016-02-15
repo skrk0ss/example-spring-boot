@@ -1,5 +1,6 @@
 package spring.boot.example.config;
 
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -11,7 +12,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @EnableAutoConfiguration
-@ComponentScan
+@ComponentScan(basePackages="spring.boot.example.controller")
 @EntityScan(basePackages="spring.boot.example.domain")
 @EnableJpaRepositories(basePackages="spring.boot.example.repository")
 public class SampleWebJspApplication extends SpringBootServletInitializer {
