@@ -15,6 +15,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import spring.boot.example.vo.BoardRequestVO;
 
 @Entity
 @Table(name = "bt_board")
@@ -50,5 +51,12 @@ public class Board {
 
 	@Column(name = "updated_dt", insertable = true, updatable = true)
 	private Date updatedDate;
+
+	public Board(BoardRequestVO boardRequestVO, User user){
+		this.user = user;
+		this.title = boardRequestVO.getTitle();
+		this.contents = boardRequestVO.getContents();
+		this.hits = 0;
+	}
 
 }

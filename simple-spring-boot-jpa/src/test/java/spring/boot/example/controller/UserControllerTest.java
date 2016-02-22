@@ -38,11 +38,8 @@ public class UserControllerTest extends BaseControllerTests {
 		requestVO.setPasword("11111");
 
 		logger.warn(JsonUtils.toString("contents:" + requestVO));
-		mock.perform(
-				post("/users").contentType(APPLICATION_JSON_UTF8)
-						.content(JsonUtils.toString(requestVO))
-						.accept(MediaType.APPLICATION_JSON)
-						.characterEncoding("UTF-8")).andDo(print());
+		mock.perform(post("/users").contentType(APPLICATION_JSON_UTF8).content(JsonUtils.toString(requestVO))
+				.accept(MediaType.APPLICATION_JSON).characterEncoding("UTF-8")).andDo(print());
 	}
 
 	@Test

@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
@@ -21,6 +22,7 @@ import spring.boot.example.util.CommonUtils;
 @Entity
 @Table(name = "mt_user")
 @ToString
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class User {
@@ -55,6 +57,7 @@ public class User {
 		this.status = true;
 		this.createdDate = new Date();
 		this.role = Role.ADMIN;
+		this.password = password;
 	}
 
 	public static User newInstance(String email, String password) {
